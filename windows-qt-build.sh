@@ -16,6 +16,7 @@ TARGET_OS=NATIVE_WINDOWS make CC=i686-w64-mingw32.static-gcc CXX=i686-w64-mingw3
 cd ../..
 
 cd ./src/secp256k1
+./autogen.sh
 ./configure --host=i686-w64-mingw32.static --prefix=/root/mxe/usr/i686-w64-mingw32.static --enable-static --disable-shared --with-bignum=no  --enable-module-recovery
 make
 cd ../..
