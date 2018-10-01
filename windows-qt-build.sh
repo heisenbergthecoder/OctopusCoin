@@ -10,8 +10,8 @@ MXE_SHARED_INCLUDE_PATH=/root/mxe/usr/i686-w64-mingw32.shared/include
 MXE_SHARED_LIB_PATH=/root/mxe/usr/i686-w64-mingw32.shared/lib
 
 cd ./src/leveldb
-#TARGET_OS=NATIVE_WINDOWS make CC=i686-w64-mingw32.static-gcc CXX=i686-w64-mingw32.static-g++ OPT="-m64 -pipe -fstack-protector-all -D_FORTIFY_SOURCE=2 -O2" -I $MXE_INCLUDE_PATH -pthread libleveldb
-.a libmemenv.a
+chmod +x *
+#TARGET_OS=NATIVE_WINDOWS make CC=i686-w64-mingw32.static-gcc CXX=i686-w64-mingw32.static-g++ OPT="-m64 -pipe -fstack-protector-all -D_FORTIFY_SOURCE=2 -O2" -I $MXE_INCLUDE_PATH -pthread libleveldb.a libmemenv.a
 TARGET_OS=NATIVE_WINDOWS make CC=i686-w64-mingw32.static-gcc CXX=i686-w64-mingw32.static-g++ libleveldb.a libmemenv.a
 cd ../..
 
