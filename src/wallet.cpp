@@ -3597,9 +3597,9 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
     // after block TIERED_MASTERNODES_START_BLOCK we start with the tiered masternodes logic
     if (pindexPrev->nHeight+1 >= TIERED_MASTERNODES_START_BLOCK) {
         if (tier != 0) {
-            if (pindexPrev->nHeight+1 < 9157000)
+            if (pindexPrev->nHeight+1 < 157000)
                 masternodePayment = masternodeTierRewards[tier]*COIN + (int64_t) (nFees * ((double)masternodeTierRewards[tier]/(POS_REWARD_TIERED_MN+masternodeTierRewards[tier])));
-            else if (pindexPrev->nHeight+1 < 9242600)
+            else if (pindexPrev->nHeight+1 < 242600)
                 masternodePayment = masternodeTierRewards157000[tier]*COIN + (int64_t) (nFees * ((double)masternodeTierRewards157000[tier]/(POS_REWARD_TIERED_MN+masternodeTierRewards157000[tier])));
             else
                 masternodePayment = masternodeTierRewards242600[tier]*COIN + (int64_t) (nFees * ((double)masternodeTierRewards242600[tier]/(POS_REWARD_TIERED_MN+masternodeTierRewards242600[tier])));
@@ -3611,9 +3611,9 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
         nCredit += POS_REWARD_TIERED_MN*COIN + nFees;
         LogPrintf("nCredit pos: %i\n", nCredit);
         if (tier != 0) {
-            if (pindexPrev->nHeight+1 < 9157000)
+            if (pindexPrev->nHeight+1 < 157000)
                 nCredit += masternodeTierRewards[tier]*COIN;
-            else if (pindexPrev->nHeight+1 < 9242600)
+            else if (pindexPrev->nHeight+1 < 242600)
                 nCredit += masternodeTierRewards157000[tier]*COIN;
             else
                 nCredit += masternodeTierRewards242600[tier]*COIN;

@@ -87,8 +87,8 @@ public:
         hashGenesisBlock = genesis.GetHash();
 
 
-	//printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-	//printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
+		//printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+		//printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
 
 
 
@@ -103,11 +103,11 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
 	
-	vSeeds.push_back(CDNSSeedData("0",  "201.73.79.39"));
-        vSeeds.push_back(CDNSSeedData("1",  "94.177.189.246"));
-        vSeeds.push_back(CDNSSeedData("2",  "80.211.72.155"));
+		vSeeds.push_back(CDNSSeedData("0",  "seed1.octopuscoins.com"));
+        vSeeds.push_back(CDNSSeedData("1",  "seed2.octopuscoins.com"));
+        vSeeds.push_back(CDNSSeedData("2",  "seed3.octopuscoins.com"));
         
-	convertSeeds(vFixedSeeds, pnSeed, ARRAYLEN(pnSeed), nDefaultPort);
+		convertSeeds(vFixedSeeds, pnSeed, ARRAYLEN(pnSeed), nDefaultPort);
 
         nPoolMaxTransactions = 3;
         //strSporkKey = "046f78dcf911fbd61910136f7f0f8d90578f68d0b3ac973b5040fb7afb501b5939f39b108b0569dca71488f5bbf498d92e4d1194f6f941307ffd95f75e76869f0e";

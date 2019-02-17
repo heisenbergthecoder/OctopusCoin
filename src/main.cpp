@@ -1407,7 +1407,7 @@ bool IsPOSRewardValid(int64_t value, int64_t nFees) {
         if (nHeight < TIERED_MASTERNODES_START_BLOCK) {
             return value == (120*COIN + nFees);
         }
-        else if (nHeight < 9157000 ) {
+        else if (nHeight < 157000 ) {
             // Using BOOST_FOREACH for concistency with the rest of the code
             BOOST_FOREACH(PAIRTYPE(const int, int)& tier, masternodeTierRewards)
             {
@@ -1419,7 +1419,7 @@ bool IsPOSRewardValid(int64_t value, int64_t nFees) {
                 return true;
             }
         }
-        else if (nHeight < 9242600) {
+        else if (nHeight < 242600) {
             // Using BOOST_FOREACH for concistency with the rest of the code
             BOOST_FOREACH(PAIRTYPE(const int, int)& tier, masternodeTierRewards157000)
             {
